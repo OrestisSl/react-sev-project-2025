@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter } from "react-router-dom";
 import { Home , CreateRecipe , Preferences } from "../pages";
 
 export const router = createBrowserRouter([
