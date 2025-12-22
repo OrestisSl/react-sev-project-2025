@@ -1,5 +1,5 @@
 export const navItems = [
-  { label: "Home", link: "/" },
+  { label: "Recipes", link: "/" },
   { label: "Create Recipe", link: "/create-recipe" },
   { label: "My Preferences", link: "/preferences" },
 ];
