@@ -3,11 +3,11 @@ import { navItems } from "../constants/data";
 
 const Navbar = () => {
   const baseNavItemStyle =
-    " text-2xl  hover:text-nav-hover transition-colors duration-150 cursor-pointer";
+    " text-xl font-inter font-medium hover:text-nav-hover transition-colors duration-150 cursor-pointer";
 
   return (
     <header className="h-20 bg-nav-bg shadow-lg flex items-center justify-between px-5 ">
-      <h1 className="text-2xl font-semibold font-geist text-nav-text">
+      <h1 className="text-2xl font-semibold font-playfair text-nav-text">
         Recipe Book
       </h1>
 
