@@ -1,9 +1,7 @@
-import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { navItems } from "../constants/data";
 
 const Navbar = () => {
-  const [active, setIsActive] = useState("Home");
-
   const baseNavItemStyle =
     " text-2xl  hover:text-nav-hover transition-colors duration-150 cursor-pointer";
 
@@ -17,17 +15,17 @@ const Navbar = () => {
         <ul className="flex space-x-8">
           {navItems.map((navItem) => {
             return (
-              <li
-                className={`${
-                  navItem.label == active
-                    ? baseNavItemStyle + "  text-nav-active"
-                    : baseNavItemStyle + " text-nav-text"
-                }`}
+              <NavLink
                 key={navItem.label}
-                onClick={() => setIsActive(navItem.label)}
+                to={navItem.link}
+                className={({ isActive }) =>
+                  `${baseNavItemStyle} ${
+                    isActive ? "text-nav-active" : "text-nav-text"
+                  }`
+                }
               >
                 {navItem.label}
-              </li>
+              </NavLink>
             );
           })}
         </ul>
