@@ -1,7 +1,14 @@
+import Hero from "../components/Hero"
+import RecipeGrid from "../components/RecipeGrid"
+import SearchInput from "../components/SearchInput"
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <main className="min-h-screen">
+      <Hero/>
+      <SearchInput/>
+      <RecipeGrid/>
+    </main>
   )
 }
 
