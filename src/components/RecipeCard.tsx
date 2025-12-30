@@ -1,0 +1,23 @@
+import type { RecipeCardProp } from "../types/types";
+
+
+const RecipeCard = ({ title ,image ,difficulty ,time }:RecipeCardProp) => {
+  return (
+    <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden hover:scale-[1.02] ">
+      <img src={image} alt="recipe image" className="w-full h-48 object-cover" />
+      <div className="p-4 flex flex-col gap-2">
+        <h3 className="font-playfair text-xl font-semibold text-gray-800 line-clamp-1">
+          {title}
+        </h3>
+        <p className="text-gray-500 text-sm">
+          {time} ⏱ • {difficulty}
+        </p>
+        <button className="mt-2 bg-violet-600 hover:bg-violet-700 text-white py-2 rounded-lg text-sm transition-all">
+          View Recipe
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default RecipeCard;
