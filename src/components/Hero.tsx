@@ -2,7 +2,7 @@ import { PiCookingPotFill } from "react-icons/pi";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen mx-2.5 flex flex-col items-center space-y-6 mt-10 ">
+    <section className="mx-2.5 flex flex-col items-center space-y-6 mt-10 ">
       <div className="  bg-hero-badge-bg text-hero-badge-text font-semibold flex items-center justify-center rounded-2xl w-64 p-2 ">
         <PiCookingPotFill className="mr-3" />
         <p>Discover Amazing Recipes</p>
