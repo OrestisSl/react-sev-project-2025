@@ -25,3 +25,11 @@
 body {
   background-color: var( --color-primary-bg);
 }
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.btn-primary {
+  @apply px-2 py-2 rounded-md bg-violet-600 text-white font-medium hover:bg-violet-700 transition-colors text-center;
+}
