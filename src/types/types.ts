@@ -7,3 +7,11 @@ export interface RecipeCardProp {
   servings?: number;
   difficulty: RecipeDifficulty;
 }
+
+export type RecipeCategory =
+  | "Breakfast"
+  | "Lunch"
+  | "Dinner"
+  | "Dessert"
+  | "Snack"
+  | "Appetizer";
