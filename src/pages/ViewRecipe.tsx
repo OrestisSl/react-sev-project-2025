@@ -9,7 +9,9 @@ const ViewRecipe = () => {
 
   const recipe = recipes.find((r) => r.title === title);
 
-  {/* Render Case : If no recipe was found */}
+  {
+    /* Render Case : If no recipe was found */
+  }
   if (!recipe) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] gap-6 px-4">
@@ -68,14 +70,16 @@ const ViewRecipe = () => {
         )}
 
         {/* Recipe Instructions */}
-        <div>
-          <h2 className="text-2xl font-semibold mb-3">Instructions</h2>
-          <ol className="list-decimal list-inside space-y-3 text-gray-700">
-            {recipe.instructions.map((step, index) => (
-              <li key={index}>{step}</li>
-            ))}
-          </ol>
-        </div>
+        {recipe.instructions && (
+          <div>
+            <h2 className="text-2xl font-semibold mb-3">Instructions</h2>
+            <ol className="list-decimal list-inside space-y-3 text-gray-700">
+              {recipe.instructions.map((step, index) => (
+                <li key={index}>{step}</li>
+              ))}
+            </ol>
+          </div>
+        )}
       </div>
 
       {/* Back to Home Page */}

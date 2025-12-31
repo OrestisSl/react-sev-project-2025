@@ -6,7 +6,7 @@ export interface RecipeCardProp {
   time: number;
   servings?: number;
   ingredients?: string[];
-  instructions: string[];
+  instructions?: string[];
   difficulty: RecipeDifficulty;
 }
 
