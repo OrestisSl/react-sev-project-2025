@@ -15,7 +15,7 @@ const RecipeGrid = () => {
             <HiBookmarkSlash className="w-8 h-8 text-violet-600" />
           </div>
 
-          <h2 className="text-2xl font-semibold text-violet-400">No recipes yet</h2>
+          <h2 className="text-2xl font-semibold text-violet-900">No recipes yet</h2>
 
           <p className="text-violet-400 text-base leading-relaxed">
             Looks a bit empty here. Once recipes are added, they will appear in
