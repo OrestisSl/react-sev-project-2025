@@ -1,6 +1,7 @@
 import { CiSearch } from "react-icons/ci";
+import type { SearchInputProps } from "../types/types";
 
-const SearchInput = () => {
+const SearchInput = ({ value , onChange }: SearchInputProps) => {
   return (
     <div className="flex items-center justify-center mt-16 px-4">
       <div className="relative w-full max-w-xl">
@@ -8,7 +9,9 @@ const SearchInput = () => {
         <input
           type="text"
           placeholder="Search recipes by name..."
-          className=" text-base lg:text-lg       w-full bg-white/80 rounded-xl py-3 pl-12 pr-4 text-gray-800 placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:bg-white transition-all duration-200 ease-in-out shadow-lg"
+          className=" text-base lg:text-lg w-full bg-white/80 rounded-xl py-3 pl-12 pr-4 text-gray-800 placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:bg-white transition-all duration-200 ease-in-out shadow-lg"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
         />
       </div>
     </div>

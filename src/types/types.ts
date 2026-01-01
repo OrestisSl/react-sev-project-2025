@@ -17,3 +17,13 @@ export type RecipeCategory =
   | "Dessert"
   | "Snack"
   | "Appetizer";
+
+export interface SearchInputProps {
+  value: string;
+  onChange: (value: string) => void;
+};
+
+export interface RecipeGridProps  {
+  recipes: RecipeCardProp[];
+  searchQuery: string;
+};
