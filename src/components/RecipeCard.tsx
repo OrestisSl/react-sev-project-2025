@@ -10,7 +10,7 @@ const RecipeCard = ({ title ,image ,difficulty ,time }:RecipeCardProp) => {
         <h3 className="font-lora text-xl font-semibold text-gray-800 line-clamp-1">
           {title}
         </h3>
-        <p className="text-gray-500 text-sm">
+        <p className="text-gray-700 text-sm">
           {time} mins ⏱ • {difficulty}
         </p>
         <Link to={`/recipe/${title}`} className="mt-2 btn-primary">
