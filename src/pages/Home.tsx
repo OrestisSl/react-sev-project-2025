@@ -1,6 +1,4 @@
-import Hero from "../components/Hero"
-import RecipeGrid from "../components/RecipeGrid"
-import SearchInput from "../components/SearchInput"
+import { Hero, SearchInput, RecipeGrid } from "../components"
 
 const Home = () => {
   return (
