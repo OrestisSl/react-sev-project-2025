@@ -57,8 +57,8 @@ const ViewRecipe = () => {
           >
             {recipe.difficulty}
           </span>
-          {recipe.servings && <span>Servings: {recipe.servings}</span>}
-          <span>Prep Time: {recipe.time} min</span>
+          {recipe.servings && <span className="font-semibold">Servings: {recipe.servings}</span>}
+          <span className="font-semibold">Prep Time: {recipe.time} min</span>
         </div>
       </div>
 
