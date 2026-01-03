@@ -8,7 +8,6 @@ export type RecipeCategory = (typeof RECIPE_CATEGORIES)[number];
 
 export interface RecipeCardProp {
   title: string;
-  slug: string;
   image: string;
   time: number;
   servings?: number;
