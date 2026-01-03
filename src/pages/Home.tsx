@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Hero, SearchInput, RecipeGrid } from "../components";
-import { recipes } from "../constants/data";
-
+import { RecipesContext } from "../context/RecipesContext";
 const Home = () => {
-  const [search, setSearch] = useState("");
 
+  const { recipes } = useContext(RecipesContext);
+
+  const [search, setSearch] = useState("");
   const filteredRecipes = recipes.filter((r) =>
     r.title.toLowerCase().includes(search.toLowerCase())
   );

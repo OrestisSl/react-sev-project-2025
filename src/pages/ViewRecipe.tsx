@@ -1,11 +1,14 @@
 import { Link, useParams } from "react-router-dom";
-import { recipes } from "../constants/data";
+
 import { HiBookmarkSlash } from "react-icons/hi2";
 import { BiArrowBack } from "react-icons/bi";
 import { difficultyColor } from "../util/util";
+import { useContext } from "react";
+import { RecipesContext } from "../context/RecipesContext";
 
 const ViewRecipe = () => {
   const { title } = useParams<{ title: string }>();
+  const { recipes } = useContext(RecipesContext);
 
   const recipe = recipes.find((r) => r.title === title);
 
