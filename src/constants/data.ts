@@ -6,6 +6,9 @@ export const navItems = [
   { label: "Create", link: "/create-recipe", icon: LuPlus },
 ];
 
+ export const DEFAULT_IMAGE =
+      "https://worldfoodtour.co.uk/wp-content/uploads/2013/06/neptune-placeholder-48.jpg";
+
 export const recipes: RecipeCardProp[] = [
   {
     title: "Creamy Garlic Pasta",
@@ -14,6 +17,7 @@ export const recipes: RecipeCardProp[] = [
     time: 25,
     difficulty: "Easy",
     servings: 2,
+    category: "Lunch",
     ingredients: [
       "200g pasta",
       "2 tbsp butter",
@@ -38,6 +42,7 @@ export const recipes: RecipeCardProp[] = [
     time: 10,
     difficulty: "Easy",
     servings: 1,
+    category: "Breakfast",
     ingredients: [
       "2 slices of bread",
       "1 ripe avocado",
@@ -60,6 +65,7 @@ export const recipes: RecipeCardProp[] = [
     time: 8,
     difficulty: "Medium",
     servings: 1,
+    category: "Breakfast",
     ingredients: [
       "1 cup mixed berries (strawberries, blueberries, raspberries)",
       "1 banana",
@@ -72,77 +78,6 @@ export const recipes: RecipeCardProp[] = [
       "Pour into a bowl and top with granola.",
       "Drizzle honey on top.",
       "Serve immediately.",
-    ],
-  },
-  {
-    title: "Spicy Chicken Tacos",
-    image:
-      "https://rms-media-prod.generalmills.com/d2601ae9-1f63-49fe-9703-196caf914edf.jpg",
-    time: 20,
-    difficulty: "Medium",
-    servings: 3,
-    ingredients: [
-      "6 small tortillas",
-      "300g chicken breast, sliced",
-      "1 tsp chili powder",
-      "1/2 tsp paprika",
-      "1/2 cup shredded lettuce",
-      "1/4 cup diced tomatoes",
-      "2 tbsp sour cream",
-    ],
-    instructions: [
-      "Season chicken with chili powder and paprika.",
-      "Cook chicken in a skillet until done.",
-      "Warm tortillas and fill with chicken.",
-      "Top with lettuce, tomatoes, and sour cream.",
-      "Serve immediately.",
-    ],
-  },
-  {
-    title: "Chocolate Chip Cookies",
-    image:
-      "https://assets.bonappetit.com/photos/58e2844b65366d7ba90812ea/master/pass/0417-Brown-Butter-Toffee-ChocolateChip%20Cookie-group.jpg",
-    time: 30,
-    difficulty: "Easy",
-    servings: 4,
-    ingredients: [
-      "1 cup butter, softened",
-      "1 cup sugar",
-      "2 cups flour",
-      "1 tsp baking soda",
-      "1 tsp vanilla extract",
-      "1 cup chocolate chips",
-    ],
-    instructions: [
-      "Preheat oven to 180°C.",
-      "Cream butter and sugar together.",
-      "Mix in flour, baking soda, and vanilla.",
-      "Fold in chocolate chips.",
-      "Scoop dough onto baking sheet and bake 10-12 minutes.",
-      "Cool and serve.",
-    ],
-  },
-  {
-    title: "Beef Stir Fry",
-    image:
-      "https://www.allrecipes.com/thmb/7N-Xq1XMMJw8G0KJv2e0ETUYB2I=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/228823-quick-beef-stir-fry-DDMFS-4x3-1f79b031d3134f02ac27d79e967dfef5.jpg",
-    time: 18,
-    difficulty: "Hard",
-    servings: 3,
-    ingredients: [
-      "300g beef strips",
-      "1 bell pepper, sliced",
-      "1 carrot, julienned",
-      "2 tbsp soy sauce",
-      "1 tsp sesame oil",
-      "1 clove garlic, minced",
-    ],
-    instructions: [
-      "Heat oil in a wok and sauté garlic.",
-      "Add beef strips and cook until browned.",
-      "Add vegetables and stir fry for 5-7 minutes.",
-      "Add soy sauce and sesame oil, cook another 2 minutes.",
-      "Serve hot with rice or noodles.",
     ],
   },
 ];
