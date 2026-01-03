@@ -7,10 +7,11 @@ import { useContext } from "react";
 import { RecipesContext } from "../context/RecipesContext";
 
 const ViewRecipe = () => {
-  const { title } = useParams<{ title: string }>();
   const { recipes } = useContext(RecipesContext);
 
-  const recipe = recipes.find((r) => r.title === title);
+  const { title } = useParams<{ title: string }>();
+  const decodedTitle = title ? decodeURIComponent(title) : "";
+  const recipe = recipes.find((r) => r.title === decodedTitle);
 
   {
     /* Render Case : If no recipe was found */
@@ -45,7 +46,9 @@ const ViewRecipe = () => {
 
       {/* Recipe Title & Meta */}
       <div className="mb-6">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-2">{recipe.title}</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold mb-2 wrap-break-word">
+          {recipe.title}
+        </h1>
         <div className="flex flex-wrap gap-4 text-sm sm:text-base text-gray-600 items-center">
           <span
             className={`px-2 py-1 rounded font-semibold ${difficultyColor(
@@ -59,14 +62,17 @@ const ViewRecipe = () => {
         </div>
       </div>
 
+      {/* Ingredients & Instructions */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Recipe Ingredients */}
         {recipe.ingredients && (
-          <div>
+          <div className="overflow-x-auto">
             <h2 className="text-2xl font-semibold mb-3">Ingredients</h2>
-            <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <ul className="list-disc list-inside space-y-2 text-gray-700 min-w-50">
               {recipe.ingredients.map((ingredient, index) => (
-                <li key={index}>{ingredient}</li>
+                <li key={index} className="wrap-break-word">
+                  {ingredient}
+                </li>
               ))}
             </ul>
           </div>
@@ -74,11 +80,13 @@ const ViewRecipe = () => {
 
         {/* Recipe Instructions */}
         {recipe.instructions && (
-          <div>
+          <div className="overflow-x-auto">
             <h2 className="text-2xl font-semibold mb-3">Instructions</h2>
-            <ol className="list-decimal list-inside space-y-3 text-gray-700">
+            <ol className="list-decimal list-inside space-y-3 text-gray-700 min-w-50">
               {recipe.instructions.map((step, index) => (
-                <li key={index}>{step}</li>
+                <li key={index} className="wrap-break-word">
+                  {step}
+                </li>
               ))}
             </ol>
           </div>
