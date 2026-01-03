@@ -19,9 +19,6 @@ A **modern, responsive recipe web application** built with **React**, **TypeScri
 - [Technologies](#-technologies)
 - [Project Structure](#-project-structure)
 - [Getting Started](#-getting-started)
-- [Available Scripts](#-available-scripts)
-- [License](#-license)
-
 ---
 
 ## ✨ Features
