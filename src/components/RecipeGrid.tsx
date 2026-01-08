@@ -1,7 +1,5 @@
-import RecipeCard from "./RecipeCard";
 import type { RecipeGridProps } from "../types/types";
-import NoRecipesUI from "./NoRecipesUI";
-import NoSearchResultsUI from "./NoSearchResultsUI";
+import { NoRecipesUI, NoSearchResultsUI, RecipeCard } from "../components";
 
 const RecipeGrid = ({ recipes, searchQuery }: RecipeGridProps) => {
   const hasRecipes = recipes.length > 0;
